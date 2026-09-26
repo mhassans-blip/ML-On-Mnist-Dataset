@@ -1,0 +1,6 @@
+@echo off
+echo Starting FastAPI...
+start cmd /k "uvicorn api:app --reload"
+timeout /t 3 >nul
+echo Starting Streamlit...
+streamlit run app.py
